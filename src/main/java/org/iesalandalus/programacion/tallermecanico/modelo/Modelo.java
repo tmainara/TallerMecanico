@@ -67,6 +67,7 @@ public class Modelo {
     public Revision cerrar (Revision revision, LocalDate fechaFin) throws TallerMecanicoExcepcion {
         return new Revision(revisiones.cerrar(revision,fechaFin));
     }
+
     public void borrar ( Cliente cliente) throws TallerMecanicoExcepcion {
         List<Revision> revisionesClientes = revisiones.get(cliente);
         for (Revision revision : revisionesClientes) {

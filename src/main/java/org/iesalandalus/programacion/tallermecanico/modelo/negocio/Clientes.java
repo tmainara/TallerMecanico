@@ -9,6 +9,7 @@ import java.util.Objects;
 
 public class Clientes {
     private final List<Cliente> coleccionClientes;
+
     public Clientes(){
         coleccionClientes = new ArrayList<>();
     }
