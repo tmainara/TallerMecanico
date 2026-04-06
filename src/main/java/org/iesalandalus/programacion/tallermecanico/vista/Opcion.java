@@ -28,7 +28,7 @@ public enum Opcion {
     private final String mensaje;
     private static final Map<Integer, Opcion> opcionesPorNumero = new HashMap<>();
     static {
-        for (Opcion opcion : Opcion.values()) {
+        for (Opcion opcion : values()) {
             opcionesPorNumero.put(opcion.numeroOpcion, opcion);
         }
     }
