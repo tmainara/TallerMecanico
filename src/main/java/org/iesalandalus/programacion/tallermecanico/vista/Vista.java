@@ -9,7 +9,6 @@ import java.util.List;
 public class Vista {
     private Controlador controlador;
 
-    private Controlador controlador;
 
     public void setControlador(Controlador controlador) {
         if (controlador == null) {
@@ -53,7 +52,7 @@ public class Vista {
                 case SALIR -> salir();
             }
         } catch (Exception e) {
-            System.out.println("Error: s%n%" + e.getMessage());
+            System.out.printf("Error: s%n%", e.getMessage());
         }
     }
     private void insertarCliente() {
@@ -73,7 +72,7 @@ public class Vista {
     }
     private void buscarCliente() {
         Consola.mostrarCabecera("Buscar cliente");
-        System.out.println(controlador.buscar(Consola.leerClienteDni()));
+        Cliente cliente = controlador.buscar(Consola.leerClienteDni());
         System.out.println(cliente != null ? cliente : "No existe ningún cliente con ese DNI.");
     }
     private void buscarVehiculo() {
