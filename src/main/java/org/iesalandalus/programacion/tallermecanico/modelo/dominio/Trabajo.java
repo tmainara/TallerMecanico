@@ -30,14 +30,17 @@ public abstract class Trabajo {
         this.horas = trabajo.horas;
     }
     public static Trabajo copiar(Trabajo trabajo){
-        Objects.requireNonNull(trabajo,"El trabajo no puede ser nulo.");
-        Trabajo trabajoCopiado = null;
-        if (trabajo instanceof Mecanico mecanico){
-            trabajoCopiado = new Mecanico(mecanico);
-        } else if (trabajo instanceof Revision revision){
-            trabajoCopiado = new Revision(revision);
+        Objects.requireNonNull(trabajo, "El trabajo no puede ser nulo.");
+
+        if (trabajo instanceof Mecanico mecanico) {
+            return new Mecanico(mecanico);
         }
-        return trabajoCopiado;
+
+        if (trabajo instanceof Revision revision) {
+            return new Revision(revision);
+        }
+
+        throw new IllegalArgumentException("Tipo de trabajo desconocido.");
     }
     public static Trabajo get(Vehiculo vehiculo){
         Cliente clienteExistente = new Cliente("Belén Esteban", "12345678A","617885050");
