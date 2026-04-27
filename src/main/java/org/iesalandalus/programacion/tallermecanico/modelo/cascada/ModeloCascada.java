@@ -2,13 +2,8 @@ package org.iesalandalus.programacion.tallermecanico.modelo.cascada;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Mecanico;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IClientes;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ITrabajos;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IVehiculos;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Clientes;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Trabajos;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehiculos;
@@ -23,7 +18,12 @@ public class ModeloCascada implements Modelo {
     private ITrabajos trabajos;
     private IClientes clientes;
 
-    public ModeloCascada(){
+    public ModeloCascada(FabricaFuenteDatos fabricaFuenteDatos) {
+        Objects.requireNonNull(fabricaFuenteDatos,"No se puede crear un modelo con una fábrica de fuente de datos nula.");
+        IFuenteDatos fuenteDatos = fabricaFuenteDatos.crear();
+        clientes = fuenteDatos.crearClientes();
+        vehiculos = fuenteDatos.crearVehiculos();
+        trabajos = fuenteDatos.crearTrabajos();
         comenzar();
     }
     @Override
@@ -51,8 +51,12 @@ public class ModeloCascada implements Modelo {
         Objects.requireNonNull(trabajo,"No se puede insertar una revisión nula.");
         Cliente cliente = clientes.buscar(trabajo.getCliente());
         Vehiculo vehiculo = vehiculos.buscar(trabajo.getVehiculo());
-
-        trabajos.insertar(Trabajo.copiar(trabajo));
+        if (trabajo instanceof Revision) {
+            trabajo = new Revision(cliente, vehiculo, trabajo.getFechaInicio());
+        } else if (trabajo instanceof Mecanico) {
+            trabajo = new Mecanico(cliente, vehiculo, trabajo.getFechaInicio());
+        }
+        trabajos.insertar(trabajo);
     }
     @Override
     public Cliente buscar(Cliente cliente){
@@ -80,6 +84,7 @@ public class ModeloCascada implements Modelo {
     @Override
     public Trabajo anadirPrecioMaterial(Trabajo trabajo, float precioMaterial) throws TallerMecanicoExcepcion {
         return trabajos.anadirPrecioMaterial(trabajo, precioMaterial);
+
     }
     @Override
     public Trabajo cerrar(Trabajo trabajo, LocalDate fechaFin) throws TallerMecanicoExcepcion {

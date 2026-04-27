@@ -1,20 +1,20 @@
 package org.iesalandalus.programacion.tallermecanico.controlador;
 
-import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
+import org.iesalandalus.programacion.tallermecanico.modelo.cascada.ModeloCascada;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
-import org.iesalandalus.programacion.tallermecanico.vista.Vista;
+import org.iesalandalus.programacion.tallermecanico.vista.texto.VistaTexto;
 
 import java.util.List;
 import java.util.Objects;
 
 public class Controlador {
-    private final Modelo modelo;
-    private final Vista vista;
+    private final ModeloCascada modelo;
+    private final VistaTexto vista;
 
-    public Controlador(Modelo modelo, Vista vista) {
+    public Controlador(ModeloCascada modelo, VistaTexto vista) {
         Objects.requireNonNull(modelo, "El modelo no puede ser nulo.");
         Objects.requireNonNull(vista, "La vista no puede ser nula.");
         this.modelo = modelo;
