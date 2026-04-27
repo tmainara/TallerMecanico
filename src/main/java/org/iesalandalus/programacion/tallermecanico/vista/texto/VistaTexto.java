@@ -12,7 +12,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
     private GestorEventos gestorEventos;
 
     @Override
-    public GestorEventos gestorEventos() {
+    public GestorEventos getGestorEventos() {
         return gestorEventos;
     }
 

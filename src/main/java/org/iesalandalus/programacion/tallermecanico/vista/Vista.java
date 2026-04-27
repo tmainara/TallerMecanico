@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface Vista {
-    GestorEventos gestorEventos();
+    GestorEventos getGestorEventos();
 
     void comenzar();
 
