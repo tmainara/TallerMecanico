@@ -8,8 +8,10 @@ import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
 import java.time.LocalDate;
 import java.util.List;
 
+import static org.iesalandalus.programacion.tallermecanico.vista.texto.Consola.mostrarMenu;
+
 public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.vista.Vista {
-    private GestorEventos gestorEventos;
+    private  GestorEventos gestorEventos = new GestorEventos(Evento.values());
 
     @Override
     public GestorEventos getGestorEventos() {
@@ -18,7 +20,13 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public void comenzar() {
+        Evento opcion;
         System.out.println("¡¡¡Bienvenido al taller mecánico de Maricarmen!!!");
+        do {
+            mostrarMenu();
+            opcion = Consola.elegirOpcion();
+            ejecutar(opcion);
+        }while ( opcion != Evento.SALIR);
     }
 
     private void ejecutar(Evento opcion) {

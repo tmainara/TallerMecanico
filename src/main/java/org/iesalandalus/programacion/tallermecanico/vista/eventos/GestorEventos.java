@@ -1,13 +1,12 @@
 package org.iesalandalus.programacion.tallermecanico.vista.eventos;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class GestorEventos {
     private Map<Evento, List<ReceptorEventos>> receptores;
 
     public GestorEventos (Evento... eventos){
+        receptores = new EnumMap<>(Evento.class);
         for (Evento evento : eventos) {
             receptores.put(evento, new ArrayList<>());
         }
