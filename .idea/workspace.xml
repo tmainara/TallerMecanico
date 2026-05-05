@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Renombrar el método gestorEventos() a getGestorEventos() en las interfaces Vista y VistaTexto para mejorar la claridad y seguir las convenciones de nomenclatura">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/GestorEventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/GestorEventos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/VistaTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/VistaTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,45 +102,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Gradle.Build TallerMecanico.executor": "Run",
-    "Gradle.ModeloTest.executor": "Run",
-    "Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor": "Run",
-    "Gradle.TrabajoTest.executor": "Run",
-    "JUnit.MecanicoTest.executor": "Run",
-    "JUnit.ModeloTest.executor": "Run",
-    "JUnit.RevisionTest.executor": "Run",
-    "JUnit.TrabajoTest.executor": "Run",
-    "JUnit.TrabajosTest.executor": "Run",
-    "JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor": "Run",
-    "RunOnceActivity.ChatTagsLlmMigration": "true",
-    "RunOnceActivity.CodyAccountHistoryMigration": "true",
-    "RunOnceActivity.CodyAccountsIdsRefresh": "true",
-    "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
-    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
-    "RunOnceActivity.CodyHistoryLlmMigration": "true",
-    "RunOnceActivity.CodyMigrateChatHistory-v2": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.DeprecatedChatLlmMigration": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "refactorizacion__herencia",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/pepino/Desarrollos/java/IntelliJ/Copias-TallerMecanico/TallerMecanico",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.excludes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build TallerMecanico.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ModeloTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TrabajoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MecanicoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ModeloTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RevisionTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TrabajoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TrabajosTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ChatTagsLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountsIdsRefresh&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyMigrateChatHistory-v2&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.DeprecatedChatLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ToggleCodyToolWindowAfterMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refactorizacion__herencia&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pepino/Desarrollos/java/IntelliJ/Copias-TallerMecanico/TallerMecanico&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.excludes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio" />
@@ -183,6 +179,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.ClientesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MecanicoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
@@ -213,50 +239,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrabajoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.TrabajoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrabajosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.TrabajosTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ClienteTest" />
+      <item itemvalue="JUnit.ClientesTest" />
       <item itemvalue="JUnit.ModeloTest" />
-      <item itemvalue="JUnit.TrabajosTest" />
       <item itemvalue="JUnit.MecanicoTest" />
-      <item itemvalue="JUnit.TrabajoTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ModeloTest" />
         <item itemvalue="JUnit.MecanicoTest" />
-        <item itemvalue="JUnit.TrabajosTest" />
-        <item itemvalue="JUnit.TrabajoTest" />
+        <item itemvalue="JUnit.ModeloTest" />
+        <item itemvalue="JUnit.ClientesTest" />
+        <item itemvalue="JUnit.ClienteTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

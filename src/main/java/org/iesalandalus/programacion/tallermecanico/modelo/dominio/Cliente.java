@@ -59,8 +59,8 @@ public class Cliente {
     public boolean comprobarLetraDni(String dni) {
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
         int numero = Integer.parseInt(dni.substring(0, 8));
-        char letraCorrecta = letras.charAt(8);
-        return letraCorrecta == letras.charAt(numero % 23);
+        char letra = dni.charAt(8);
+        return letra == letras.charAt(numero % 23);
     }
 
 
@@ -84,8 +84,7 @@ public class Cliente {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Cliente cliente = (Cliente) o;
+        if (!(o instanceof Cliente cliente)) return false;
         return Objects.equals(dni, cliente.dni);
     }
 
