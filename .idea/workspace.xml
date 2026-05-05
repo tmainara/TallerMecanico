@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Commit inicial con el enunciado, las dependencias y los tests.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Renombrar el método gestorEventos() a getGestorEventos() en las interfaces Vista y VistaTexto para mejorar la claridad y seguir las convenciones de nomenclatura">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/mivid/Desktop/1.DAW/PROGRAMACIÓN/TallerMecanico" value="3CbyJBCIMhnZ6VkKNCm6vmS7aK2" />
+    </persistenceIdMap>
   </component>
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="0" />
@@ -48,16 +53,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Enum" />
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="Profesor/refactorizacion_herencia" />
+    <option name="OPTIONS">
+      <set>
+        <option value="ALLOW_UNRELATED_HISTORIES" />
+      </set>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sprint_inicial" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,15 +95,25 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2b7VdNJDYYb9khOs32YlvwYhqd1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build TallerMecanico.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ModeloTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TrabajoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MecanicoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ModeloTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RevisionTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TrabajoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TrabajosTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ChatTagsLlmMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
@@ -102,17 +126,19 @@
     &quot;RunOnceActivity.DeprecatedChatLlmMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ToggleCodyToolWindowAfterMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refactorizacion__herencia&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/pepino/Desarrollos/java/IntelliJ/Copias-TallerMecanico/TallerMecanico&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.excludes&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -123,36 +149,80 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.iesalandalus.programacion.tallermecanico.controlador" />
+      <recent name="org.iesalandalus.programacion.tallermecanico.vista" />
+      <recent name="org.iesalandalus.programacion.tallermecanico.modelo" />
+      <recent name="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
+      <recent name="org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo" />
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'">
-    <configuration name="Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.iesalandalus.programacion.tallermecanico.modelo.*&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.Main" />
+      <module name="TallerMecanico.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.ClientesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MecanicoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.MecanicoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ModeloTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
@@ -164,69 +234,25 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
       <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.ModeloTest" />
-      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RevisionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanicoResuelto.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanico.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'" />
-      <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test" />
-      <item itemvalue="JUnit.RevisionTest" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ClienteTest" />
+      <item itemvalue="JUnit.ClientesTest" />
       <item itemvalue="JUnit.ModeloTest" />
-      <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanico.test" />
+      <item itemvalue="JUnit.MecanicoTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanico.test" />
+        <item itemvalue="JUnit.MecanicoTest" />
         <item itemvalue="JUnit.ModeloTest" />
-        <item itemvalue="JUnit.RevisionTest" />
-        <item itemvalue="JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test" />
-        <item itemvalue="Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'" />
+        <item itemvalue="JUnit.ClientesTest" />
+        <item itemvalue="JUnit.ClienteTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -255,15 +281,241 @@
       <option name="project" value="LOCAL" />
       <updated>1739183845414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Errata en el enunciado y en el diagrama.">
+      <option name="closed" value="true" />
+      <created>1739527892917</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739527892917</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Actualizo el nombre del alumno">
+      <option name="closed" value="true" />
+      <created>1776669136090</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776669136090</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Hago la clase Trabajo">
+      <option name="closed" value="true" />
+      <created>1776839752304</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1776839752304</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Hago la clase Revision que hereda de trabajo">
+      <option name="closed" value="true" />
+      <created>1776839791623</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1776839791623</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Hago la clase Mecanico que hereda de trabajo">
+      <option name="closed" value="true" />
+      <created>1776839913865</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1776839913865</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Hago la clase Controlador">
+      <option name="closed" value="true" />
+      <created>1776841086804</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1776841086804</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Añadir la interfaz IVehiculos para la gestión de vehículos">
+      <option name="closed" value="true" />
+      <created>1776960435749</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960435749</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Añadir la interfaz ITrabajos para la gestión de trabajos">
+      <option name="closed" value="true" />
+      <created>1776960455916</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960455916</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Añadir la interfaz ITrabajos para la gestión de trabajos">
+      <option name="closed" value="true" />
+      <created>1776960467411</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960467411</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Añadir la clase FuenteDatosMemoria para la gestión de datos en memoria">
+      <option name="closed" value="true" />
+      <created>1776960490295</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960490295</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Añadir la interfaz IFuenteDatosMemoria para la creación de clientes, vehículos y trabajos">
+      <option name="closed" value="true" />
+      <created>1776960562070</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960562070</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Añadir la clase Trabajos para la gestión de trabajos en memoria">
+      <option name="closed" value="true" />
+      <created>1776960635904</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960635904</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Refactorizar el método copiar en la clase Trabajo para simplificar la lógica de copia y manejar tipos desconocidos">
+      <option name="closed" value="true" />
+      <created>1776960663961</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960663961</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Añadir la clase ModeloCascada para gestionar la lógica del taller mecánico y la interacción con los datos en memoria">
+      <option name="closed" value="true" />
+      <created>1776960713699</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960713699</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Añadir la enumeración FabricaFuenteDatos para la creación de fuentes de datos en memoria">
+      <option name="closed" value="true" />
+      <created>1776960745345</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960745345</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Refactorizar la clase Modelo para implementar la interfaz y gestionar trabajos">
+      <option name="closed" value="true" />
+      <created>1776960764910</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960764910</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Añadir la enumeración FabricaModelo para la creación de instancias de Modelo">
+      <option name="closed" value="true" />
+      <created>1776960801456</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960801456</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactorizar la clase Clientes para implementar la interfaz IClientes y reorganizar el paquete">
+      <option name="closed" value="true" />
+      <created>1776960872901</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960872901</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Refactorizar la clase Vehiculos para implementar la interfaz IVehiculos y reorganizar el paquete">
+      <option name="closed" value="true" />
+      <created>1776960889430</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1776960889430</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactorizar la clase Consola y la clase Opcion para implementar la interfaz Evento y reorganizar el paquete">
+      <option name="closed" value="true" />
+      <created>1777284377714</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1777284377714</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Refactorizar la clase Controlador para implementar la interfaz IControlador y reorganizar las dependencias">
+      <option name="closed" value="true" />
+      <created>1777285233708</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1777285233708</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Añadir la interfaz IControlador para definir el contrato del controlador y gestionar eventos">
+      <option name="closed" value="true" />
+      <created>1777285252043</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1777285252043</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Añadir la clase FabricaVista para crear instancias de diferentes vistas">
+      <option name="closed" value="true" />
+      <created>1777285267493</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1777285267493</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Renombrar el método gestorEventos() a getGestorEventos() en las interfaces Vista y VistaTexto para mejorar la claridad y seguir las convenciones de nomenclatura">
+      <option name="closed" value="true" />
+      <created>1777285304180</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1777285304180</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Commit inicial con el enunciado, las dependencias y los tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit inicial con el enunciado, las dependencias y los tests." />
+    <MESSAGE value="Errata en el enunciado y en el diagrama." />
+    <MESSAGE value="Actualizo el nombre del alumno" />
+    <MESSAGE value="Hago la clase Trabajo" />
+    <MESSAGE value="Hago la clase Revision que hereda de trabajo" />
+    <MESSAGE value="Hago la clase Mecanico que hereda de trabajo" />
+    <MESSAGE value="Hago la clase Controlador" />
+    <MESSAGE value="Añadir la interfaz IVehiculos para la gestión de vehículos" />
+    <MESSAGE value="Añadir la interfaz ITrabajos para la gestión de trabajos" />
+    <MESSAGE value="Añadir la clase FuenteDatosMemoria para la gestión de datos en memoria" />
+    <MESSAGE value="Añadir la interfaz IFuenteDatosMemoria para la creación de clientes, vehículos y trabajos" />
+    <MESSAGE value="Añadir la clase Trabajos para la gestión de trabajos en memoria" />
+    <MESSAGE value="Refactorizar el método copiar en la clase Trabajo para simplificar la lógica de copia y manejar tipos desconocidos" />
+    <MESSAGE value="Añadir la clase ModeloCascada para gestionar la lógica del taller mecánico y la interacción con los datos en memoria" />
+    <MESSAGE value="Añadir la enumeración FabricaFuenteDatos para la creación de fuentes de datos en memoria" />
+    <MESSAGE value="Refactorizar la clase Modelo para implementar la interfaz y gestionar trabajos" />
+    <MESSAGE value="Añadir la enumeración FabricaModelo para la creación de instancias de Modelo" />
+    <MESSAGE value="Refactorizar la clase Clientes para implementar la interfaz IClientes y reorganizar el paquete" />
+    <MESSAGE value="Refactorizar la clase Vehiculos para implementar la interfaz IVehiculos y reorganizar el paquete" />
+    <MESSAGE value="Refactorizar la clase Consola y la clase Opcion para implementar la interfaz Evento y reorganizar el paquete" />
+    <MESSAGE value="Refactorizar la clase Controlador para implementar la interfaz IControlador y reorganizar las dependencias" />
+    <MESSAGE value="Añadir la interfaz IControlador para definir el contrato del controlador y gestionar eventos" />
+    <MESSAGE value="Añadir la clase FabricaVista para crear instancias de diferentes vistas" />
+    <MESSAGE value="Renombrar el método gestorEventos() a getGestorEventos() en las interfaces Vista y VistaTexto para mejorar la claridad y seguir las convenciones de nomenclatura" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renombrar el método gestorEventos() a getGestorEventos() en las interfaces Vista y VistaTexto para mejorar la claridad y seguir las convenciones de nomenclatura" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -290,5 +542,13 @@
     <SUITE FILE_PATH="coverage/TallerMecanico$ClientesTest.ic" NAME="ClientesTest Coverage Results" MODIFIED="1706862978002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.negocio.*</FILTER>
     </SUITE>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>
