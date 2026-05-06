@@ -9,11 +9,20 @@ import java.util.Objects;
 
 public class Vehiculos implements org.iesalandalus.programacion.tallermecanico.modelo.negocio.IVehiculos {
 
-    private final List<Vehiculo> coleccionVehiculos;
+    private static final String FICHERO_VEHICULOS = "datos/vehiculos.json";
+    private static final String RAIZ = "vehiculos";
+    private static final String VEHICULO = "vehiculo";
+    private static final String MARCA = "marca";
+    private static final String MODELO = "modelo";
+    private static final String MATRICULA = "matricula";
 
-    public Vehiculos(){
+    private final List<Vehiculo> coleccionVehiculos;
+    private Vehiculos instancia;
+
+    private Vehiculos(){
         coleccionVehiculos = new ArrayList<>();
     }
+
     @Override
     public List<Vehiculo> get(){
         return new ArrayList<>(coleccionVehiculos);

@@ -8,10 +8,22 @@ import java.util.List;
 import java.util.Objects;
 
 public class Clientes implements org.iesalandalus.programacion.tallermecanico.modelo.negocio.IClientes {
-    private final List<Cliente> coleccionClientes;
+    private static final String FICHERO_CLIENTES = "datos/clientes.json";
+    private static final String RAIZ = "clientes";
+    private static final String CLIENTE = "cliente";
+    private static final String NOMBRE = "nombre";
+    private static final String TELEFONO = "telefono";
+    private static final String DNI = "dni";
 
-    public Clientes(){
+    private final List<Cliente> coleccionClientes;
+    private Clientes instancia;
+
+    private Clientes(){
         coleccionClientes = new ArrayList<>();
+    }
+
+    Clientes getInstancia(){
+        return new Clientes();
     }
 
     @Override

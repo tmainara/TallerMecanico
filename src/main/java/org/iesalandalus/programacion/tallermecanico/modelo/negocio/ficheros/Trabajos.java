@@ -28,6 +28,7 @@ public class Trabajos implements ITrabajos {
     private static final String REVISION = "Revisión";
 
     private final List<Trabajo> coleccionTrabajos;
+    private Trabajos instancia;
 
     private Trabajos(){
         coleccionTrabajos = new ArrayList<>();

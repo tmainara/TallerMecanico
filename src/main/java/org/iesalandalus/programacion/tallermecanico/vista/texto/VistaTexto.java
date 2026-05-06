@@ -6,6 +6,7 @@ import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
@@ -150,11 +151,13 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         if (clientes.isEmpty()) {
             System.out.println("No hay clientes para mostrar.");
         } else {
+            clientes.sort(Comparator.comparing(Cliente::getNombre).thenComparing(Cliente::getDni));
             System.out.println("Clientes:");
             for (Cliente cliente : clientes) {
                 System.out.println(cliente);
             }
         }
+
     }
 
     @Override
@@ -162,6 +165,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         if (vehiculos.isEmpty()) {
             System.out.println("No hay vehículos para mostrar.");
         } else {
+            vehiculos.sort(Comparator.comparing(Vehiculo::marca).thenComparing(Vehiculo::modelo).thenComparing(Vehiculo::matricula));
             System.out.println("Vehículos:");
             for (Vehiculo vehiculo : vehiculos) {
                 System.out.println(vehiculo);
@@ -174,6 +178,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         if (trabajos.isEmpty()) {
             System.out.println("No hay trabajos para mostrar.");
         } else {
+            trabajos.sort(Comparator.comparing(Trabajo::getFechaInicio).thenComparing(t -> t.getCliente().getDni()).thenComparing(t -> t.getVehiculo().matricula()));
             System.out.println("Trabajos:");
             for (Trabajo trabajo : trabajos) {
                 System.out.println(trabajo);
