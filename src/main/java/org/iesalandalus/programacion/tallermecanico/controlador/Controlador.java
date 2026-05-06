@@ -61,6 +61,7 @@ public class Controlador implements IControlador {
                 case ANADIR_HORAS_TRABAJO -> modelo.anadirHoras(vista.leerTrabajoVehiculo(), vista.leerHoras());
                 case ANADIR_PRECIO_MATERIAL_TRABAJO -> modelo.anadirPrecioMaterial(vista.leerTrabajoVehiculo(), vista.leerPrecioMaterial());
                 case CERRAR_TRABAJO -> modelo.cerrar(vista.leerTrabajoVehiculo(), vista.leerFechaCierre());
+                case MOSTRAR_ESTADISTICAS_MENSUALES -> modelo.getEstadisticasMensuales(vista.leerMes());
                 case SALIR -> terminar();
             }
         } catch (TallerMecanicoExcepcion e) {

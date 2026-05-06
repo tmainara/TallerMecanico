@@ -1,22 +1,40 @@
-package org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria;
+package org.iesalandalus.programacion.tallermecanico.modelo.negocio.ficheros;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Mecanico;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ITrabajos;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class Trabajos implements ITrabajos {
+
+    private static final String FICHERO_TRABAJOS = "datos/trabajos.json";
+    private static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static final String RAIZ = "trabajos";
+    private static final String TRABAJO = "trabajo";
+    private static final String CLIENTE = "cliente";
+    private static final String VEHICULO = "vehiculo";
+    private static final String FECHA_INICIO = "fechaInicio";
+    private static final String FECHA_FIN = "fechaFin";
+    private static final String HORAS = "horas";
+    private static final String PRECIO_MATERIAL = "precioMaterial";
+    private static final String TIPO = "tipo";
+    private static final String MECANICO = "Mecánico";
+    private static final String REVISION = "Revisión";
+
     private final List<Trabajo> coleccionTrabajos;
 
-    public Trabajos(){
+    private Trabajos(){
         coleccionTrabajos = new ArrayList<>();
+    }
+
+    Trabajos getInstancia(){
+        return new Trabajos();
     }
 
     @Override
@@ -44,6 +62,25 @@ public class Trabajos implements ITrabajos {
             }
         }
         return resultado;
+    }
+    @Override
+    public Map<TipoTrabajo, Integer> getEstadisticasMensuales(LocalDate mes) {
+        Objects.requireNonNull(mes, "No se puede obtener estadísticas para un mes nulo.");
+        Map<TipoTrabajo, Integer> estadisticas = new java.util.HashMap<>();
+        for (Trabajo trabajo : coleccionTrabajos) {
+            if (trabajo.getFechaInicio().getYear() == mes.getYear() && trabajo.getFechaInicio().getMonth() == mes.getMonth()) {
+                TipoTrabajo tipo = TipoTrabajo.get(trabajo);
+                estadisticas.put(tipo, estadisticas.getOrDefault(tipo, 0) + 1);
+            }
+        }
+        return estadisticas;
+    }
+    private Map<TipoTrabajo, Integer> inicializarEstadisticas() {
+        Map<TipoTrabajo, Integer> estadisticas = new java.util.HashMap<>();
+        for (TipoTrabajo tipo : TipoTrabajo.values()) {
+            estadisticas.put(tipo, 0);
+        }
+        return estadisticas;
     }
 
 

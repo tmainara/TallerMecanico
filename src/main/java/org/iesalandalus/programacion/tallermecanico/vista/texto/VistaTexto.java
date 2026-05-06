@@ -7,6 +7,7 @@ import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 import static org.iesalandalus.programacion.tallermecanico.vista.texto.Consola.mostrarMenu;
 
@@ -116,6 +117,11 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
     }
 
     @Override
+    public LocalDate leerMes() {
+        return Consola.leerFecha("Introduce el mes para las estadísticas (dd/MM/yyyy): ");
+    }
+
+    @Override
     public void notificarResultado(Evento evento, String texto, boolean exito) {
         String resultado = exito ? "éxito" : "fracaso";
         System.out.printf("Resultado de la operación %s: %s%n", evento, resultado);
@@ -171,6 +177,18 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
             System.out.println("Trabajos:");
             for (Trabajo trabajo : trabajos) {
                 System.out.println(trabajo);
+            }
+        }
+    }
+
+    @Override
+    public void mostrarEstadisticasMensuales(Map<TipoTrabajo, Integer> estadisticas) {
+        if (estadisticas.isEmpty()) {
+            System.out.println("No hay estadísticas para mostrar.");
+        } else {
+            System.out.println("Estadísticas mensuales:");
+            for (Map.Entry<TipoTrabajo, Integer> entrada : estadisticas.entrySet()) {
+                System.out.printf("%s: %d%n", entrada.getKey(), entrada.getValue());
             }
         }
     }

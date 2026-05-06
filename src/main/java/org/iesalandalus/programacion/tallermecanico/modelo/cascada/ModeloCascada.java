@@ -4,13 +4,14 @@ import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.*;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Clientes;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Trabajos;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehiculos;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ficheros.Clientes;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ficheros.Trabajos;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ficheros.Vehiculos;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class ModeloCascada implements Modelo {
@@ -28,9 +29,10 @@ public class ModeloCascada implements Modelo {
     }
     @Override
     public void comenzar(){
-        vehiculos = new Vehiculos();
-        trabajos = new Trabajos();
-        clientes = new Clientes();
+       clientes.comenzar();
+       vehiculos.comenzar();
+       trabajos.comenzar();
+        System.out.println("Modelo comenzado, picha.");
     }
     @Override
     public void terminar(){
@@ -146,6 +148,10 @@ public class ModeloCascada implements Modelo {
              trabajosVehiculo.add(Trabajo.copiar(trabajo));
          }
          return trabajosVehiculo;
+     }
+     @Override
+     public Map<TipoTrabajo, Integer> getEstadisticasMensuales(LocalDate mes) {
+         return trabajos.getEstadisticasMensuales(mes);
      }
 }
 
